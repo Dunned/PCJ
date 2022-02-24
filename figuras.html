@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Figuras Geometricas</title>
+</head>
+<body>
+    <header>
+        <h1>Calculo de Area y Perimetros Figuras Geometricas</h1>
+    </header>
+    <main class="contenedor">
+        <div class="barra-control">
+            <ul>
+                <li id="cuadrado" class="seleccionado"><a class="seleccionado" href="#" onclick="areaCuadrado()">Cuadrado</a></li>
+                <li id="triangulo"><a href="#" onclick="areaTriangulo()">Triangulo</a></li>
+                <li id="circulo"><a href="#" onclick="areaCirculo()">Circulo</a></li>
+            </ul>
+        </div>
+        <section class="contenedor-operaciones cuadrado" id="operaciones-cuadrado">
+            <h2>Area y Perimetro de un Cuadrado</h2>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Cuadrado.svg/1024px-Cuadrado.svg.png" alt="">
+            <form action="">
+                <div class="datos">
+                    <label for="ladoCuadrado">Lado del Cuadrado</label>
+                    <input type="number" name="ladoCuadrado" id="ladoCuadrado">
+                </div>
+                <div class="datos-resultado">
+                    <button type="button" onclick="calcularPerimetroCuadrado()">Calcular Perimetro</button>
+                    <p id="resultadoPerimetroCuadrado" class="resultado"></p>
+                </div>
+                <div class="datos-resultado">
+                    <button type="button" onclick="calcularAreaCuadrado()">Calcular Area</button>
+                    <p id="resultadoAreaCuadrado" class="resultado"></p>
+                </div>
+            </form>
+        </section>
+
+        <section class="contenedor-operaciones triangulo ocultar" id="operaciones-triangulo">
+            <h2>Area y Perimetro de un Triangulo</h2>
+            <img src="https://www.pngkey.com/png/full/793-7936325_triangulos-png-para-portadas-triangulos-3d-de-colores.png" alt="">
+            <form action="">
+                <div class="datos">
+                    <label for="ladoCuadrado">Lado 1</label>
+                    <input type="number" name="ladoCuadrado" id="lado1">
+                </div>
+                <div class="datos">
+                    <label for="ladoCuadrado">Lado 2</label>
+                    <input type="number" name="ladoCuadrado" id="lado2">
+                </div>
+                <div class="datos">
+                    <label for="ladoCuadrado">Lado 3</label>
+                    <input type="number" name="ladoCuadrado" id="lado3">
+                </div>
+                <div class="datos-resultado">
+                    <button type="button" onclick="calcularPerimetroTriangulo()">Calcular Perimetro</button>
+                    <p id="resultadoPerimetroTriangulo" class="resultado"></p>
+                </div>
+                <div class="datos-resultado">
+                    <button type="button" onclick="calcularAreaTriangulo()">Calcular Area</button>
+                    <p id="resultadoAreaTriangulo" class="resultado"></p>
+                </div>
+            </form>
+        </section>
+
+        <section class="contenedor-operaciones circulo ocultar" id="operaciones-circulo">
+            <h2>Area y Perimetro de un Circulo</h2>
+            <img src="https://cdn.pixabay.com/photo/2012/04/18/16/08/circle-37434_640.png" alt="">
+            <form action="">
+                <div class="datos">
+                    <label for="ladoCuadrado">Radio</label>
+                    <input type="number" name="ladoCuadrado" id="radio">
+                </div>
+                <div class="datos-resultado">
+                    <button type="button" onclick="calcularPerimetroCirculo()">Calcular Perimetro</button>
+                    <p id="resultadoPerimetroCirculo" class="resultado"></p>
+                </div>
+                <div class="datos-resultado">
+                    <button type="button" onclick="calcularAreaCirculo()">Calcular Area</button>
+                    <p id="resultadoAreaCirculo" class="resultado"></p>
+                </div>
+            </form>
+        </section>
+    </main>
+    <script src="./figuras.js"></script>
+</body>
+</html>
